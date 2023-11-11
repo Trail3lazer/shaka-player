@@ -96,7 +96,6 @@ The following buttons can be added to the overflow menu:
 * remote: adds a button that opens a Remote Playback dialog. The button is visible only if the
   browser supports Remote Playback API.
 * Statistics: adds a button that displays statistics of the video.
-* displayChapters: tick marks between chapters and labels that appear on hover.
 <!-- TODO: If we add more buttons that can be put in the order this way, list them here. -->
 
 Example:
@@ -172,7 +171,7 @@ const config = {
   'seekBarColors': {
     base: 'rgba(255, 255, 255, 0.3)',
     buffered: 'rgba(255, 255, 255, 0.54)',
-    played: 'rgb(255, 255, 255)'
+    played: 'rgb(255, 255, 255)',
   }
 }
 ui.configure(config);
@@ -193,10 +192,9 @@ If you've chosen to display chapters, you can specify the color for the chapter 
 the timeline and the text color of the chapter titles that popup on hover:
  ```js
 const config = {
-  displayChapters: true,
   seekBarColors: {
     chapterMarks: 'rgb(27, 27, 27)',
-    chapterLabels: 'rgb(255, 255, 255)'
+    chapterLabels: 'rgb(255, 255, 255)',
   }
 }
 ui.configure(config);

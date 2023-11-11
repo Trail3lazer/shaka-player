@@ -60,7 +60,6 @@ describe('UI', () => {
         'picture_in_picture',
         'cast',
       ],
-      'displayChapters': true,
       // TODO: Cast receiver id to test chromecast integration
     };
 

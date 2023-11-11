@@ -880,6 +880,7 @@ describe('UI', () => {
     });
   });
 
+  
   /**
    * @param {!HTMLElement} container
    * @suppress {visibility}

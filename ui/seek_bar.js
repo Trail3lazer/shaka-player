@@ -78,9 +78,9 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
       this.markAdBreaks_();
     });
 
-    if (this.config_.displayChapters) {
-      this.setupChapters_();
-    }
+    
+    this.setupChapters_();
+    
 
     /**
      * When user is scrubbing the seek bar - we should pause the video - see
@@ -410,6 +410,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
             'linear-gradient(' + gradient.join(',') + ')';
   }
 
+
   /**
    * @param {string} color
    * @param {number} fract
@@ -419,6 +420,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
   makeColor_(color, fract) {
     return color + ' ' + (fract * 100) + '%';
   }
+
 
   /**
    * @private
@@ -461,6 +463,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
     this.bar.ariaLabel = this.localization.resolve(shaka.ui.Locales.Ids.SEEK);
   }
 
+  
   /**
    * @private
    */
@@ -541,6 +544,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
     this.thumbnailContainer_.style.top = -(height - offsetTop) + 'px';
   }
 
+
   /**
    * @return {?shaka.extern.Track} The thumbnail track.
    * @private
@@ -571,6 +575,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
     }
     return imageTracks[0];
   }
+
 
   /**
    * @private
@@ -603,6 +608,7 @@ shaka.ui.SeekBar = class extends shaka.ui.RangeElement {
      a.startTime === b.startTime && a.endTime === b.endTime);
     };
 
+    
     /** @type {function(): void} */
     const handleChapterTrackChange = () => {
       const nextLanguage = this.player.getCurrentTextLanguage() || 'und';

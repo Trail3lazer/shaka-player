@@ -248,7 +248,6 @@ shaka.ui.Overlay = class {
       keyboardLargeSeekDistance: 60,
       fullScreenElement: this.videoContainer_,
       preferDocumentPictureInPicture: true,
-      displayChapters: false,
     };
 
     // eslint-disable-next-line no-restricted-syntax
